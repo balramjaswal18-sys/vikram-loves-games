@@ -168,11 +168,19 @@ const Index = () => {
                   <Badge variant="outline">Indie</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="gaming" size="sm">
+                  <Button 
+                    variant="gaming" 
+                    size="sm"
+                    onClick={() => window.open('https://pixelheart-adventures.itch.io', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4" />
                     Play
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/vikram/pixel-heart-adventures', '_blank')}
+                  >
                     <Github className="w-4 h-4" />
                     Code
                   </Button>
@@ -197,11 +205,19 @@ const Index = () => {
                   <Badge variant="outline">Educational</Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="gaming" size="sm">
+                  <Button 
+                    variant="gaming" 
+                    size="sm"
+                    onClick={() => window.open('https://codequest-game.netlify.app', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4" />
                     Play
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => window.open('https://github.com/vikram/code-quest', '_blank')}
+                  >
                     <Github className="w-4 h-4" />
                     Code
                   </Button>
