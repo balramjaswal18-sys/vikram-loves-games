@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Star, Github, Linkedin, Mail, ExternalLink, GamepadIcon, Code2, Trophy, Coffee } from "lucide-react";
+import { Heart, Star, Github, Linkedin, Mail, ExternalLink, GamepadIcon, Code2, Trophy, Coffee, BookOpen, Calendar, ArrowRight, Shield, Lock, Eye } from "lucide-react";
 import heroImage from "@/assets/vikram-hero.png";
 
 const Index = () => {
@@ -21,7 +21,9 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-lovable">About</button>
             <button onClick={() => scrollToSection('portfolio')} className="hover:text-primary transition-lovable">Games</button>
+            <button onClick={() => scrollToSection('blog')} className="hover:text-primary transition-lovable">Blog</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-lovable">Contact</button>
+            <button onClick={() => scrollToSection('privacy')} className="hover:text-primary transition-lovable">Privacy</button>
           </div>
         </div>
       </nav>
@@ -237,6 +239,94 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section id="blog" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Dev Diary & Blog</h2>
+            <p className="text-xl text-muted-foreground">Thoughts on game development, tutorials, and behind-the-scenes</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog Post Cards */}
+            <Card className="card-shadow hover:shadow-glow transition-lovable group">
+              <CardHeader className="pb-4">
+                <div className="h-48 bg-gradient-gaming rounded-lg mb-4 flex items-center justify-center">
+                  <BookOpen className="w-12 h-12 text-white/80" />
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>Dec 15, 2024</span>
+                  <Badge variant="outline" className="ml-auto">DevLog</Badge>
+                </div>
+                <CardTitle className="group-hover:text-primary transition-lovable">
+                  Building Lovable Games: My Design Philosophy
+                </CardTitle>
+                <CardDescription>
+                  What makes a game truly lovable? Exploring the intersection of mechanics, emotion, and player connection.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="gaming" size="sm" className="group">
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-shadow hover:shadow-glow transition-lovable group">
+              <CardHeader className="pb-4">
+                <div className="h-48 bg-gradient-hero rounded-lg mb-4 flex items-center justify-center">
+                  <Code2 className="w-12 h-12 text-white/80" />
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>Dec 10, 2024</span>
+                  <Badge variant="outline" className="ml-auto">Tutorial</Badge>
+                </div>
+                <CardTitle className="group-hover:text-primary transition-lovable">
+                  Unity Tips: Creating Smooth Animations
+                </CardTitle>
+                <CardDescription>
+                  Step-by-step guide to crafting fluid character movements that feel responsive and satisfying.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="gaming" size="sm" className="group">
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-shadow hover:shadow-glow transition-lovable group">
+              <CardHeader className="pb-4">
+                <div className="h-48 bg-gradient-card rounded-lg mb-4 flex items-center justify-center">
+                  <Heart className="w-12 h-12 pixel-heart text-primary" />
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>Dec 5, 2024</span>
+                  <Badge variant="outline" className="ml-auto">Thoughts</Badge>
+                </div>
+                <CardTitle className="group-hover:text-primary transition-lovable">
+                  The Magic of Indie Game Jams
+                </CardTitle>
+                <CardDescription>
+                  Reflecting on my journey through game jams and how 48-hour constraints spark incredible creativity.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="gaming" size="sm" className="group">
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
@@ -310,6 +400,87 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Privacy Policy Section */}
+      <section id="privacy" className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Privacy Policy</h2>
+            <p className="text-xl text-muted-foreground">Your privacy matters to me</p>
+          </div>
+          
+          <div className="space-y-12">
+            <Card className="card-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Shield className="w-6 h-6 text-primary" />
+                  <CardTitle>Information Collection</CardTitle>
+                </div>
+                <CardDescription>
+                  This website respects your privacy and follows best practices for data protection.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <h4 className="font-semibold flex items-center gap-2">
+                    <Eye className="w-4 h-4" />
+                    What Information We Collect
+                  </h4>
+                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                    <li>Contact form submissions (name, email, message)</li>
+                    <li>Basic website analytics (page views, browser info)</li>
+                    <li>No personal data is stored without your explicit consent</li>
+                  </ul>
+                </div>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold flex items-center gap-2">
+                    <Lock className="w-4 h-4" />
+                    How We Protect Your Data
+                  </h4>
+                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                    <li>All data is encrypted in transit and at rest</li>
+                    <li>Contact forms are processed securely</li>
+                    <li>No third-party trackers or unnecessary cookies</li>
+                    <li>Data is never sold or shared with advertisers</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="card-shadow">
+              <CardHeader>
+                <CardTitle>Contact & Rights</CardTitle>
+                <CardDescription>
+                  Questions about privacy or want to exercise your data rights?
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  If you have any questions about this privacy policy or how your data is handled, 
+                  please don't hesitate to reach out. You have the right to:
+                </p>
+                <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+                  <li>Access your personal data</li>
+                  <li>Correct inaccurate information</li>
+                  <li>Request deletion of your data</li>
+                  <li>Object to data processing</li>
+                </ul>
+                <div className="pt-4">
+                  <Button variant="outline" onClick={() => scrollToSection('contact')}>
+                    <Mail className="w-4 h-4" />
+                    Contact Me About Privacy
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="text-center text-sm text-muted-foreground">
+              <p>Last updated: December 2024</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 px-4 border-t">
         <div className="container mx-auto max-w-6xl">
@@ -320,6 +491,8 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span>© 2024 Vikram - Game Developer</span>
+              <span>•</span>
+              <button onClick={() => scrollToSection('privacy')} className="hover:text-primary transition-lovable">Privacy Policy</button>
               <span>•</span>
               <span>Powered by Lovable</span>
             </div>
