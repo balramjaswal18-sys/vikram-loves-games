@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/",   // 👈 Always root, works for seema.fit
+  base: "/",   // 👈 Always root, works for vikram.fit
   plugins: [
     react(),
     mode === "development" && componentTagger(),
